@@ -28,8 +28,16 @@ def delete_namespace(name) -> str:
 
 
 # The tool registry + per-tool capability specs (capability = "tool:<name>").
-TOOLS = {"scale_deployment": scale_deployment, "delete_pod": delete_pod, "delete_namespace": delete_namespace}
-SPECS = {"scale_deployment": {"capability": "tool:scale_deployment"}, "delete_pod": {"capability": "tool:delete_pod"}, "delete_namespace": {"capability": "tool:delete_namespace"}}
+TOOLS = {
+    "scale_deployment": scale_deployment,
+    "delete_pod": delete_pod,
+    "delete_namespace": delete_namespace,
+}
+SPECS: dict[str, dict[str, Any]] = {
+    "scale_deployment": {"capability": "tool:scale_deployment"},
+    "delete_pod": {"capability": "tool:delete_pod"},
+    "delete_namespace": {"capability": "tool:delete_namespace"},
+}
 
 
 def governed_tools(governor: Any) -> dict[str, Any]:
