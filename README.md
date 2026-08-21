@@ -1,5 +1,7 @@
 # adapter-kubernetes
 
+**Live (graph):** [https://ali-adapter-kubernetes.vercel.app](https://ali-adapter-kubernetes.vercel.app)
+
 Decision OS / AuthGate **execution adapter** for Kubernetes. It exposes cluster
 actions as **governed tools**: each tool is the effect *behind* a Policy
 Enforcement Point and runs only when the `decision-os-min` kernel authorizes the
